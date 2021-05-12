@@ -1,0 +1,17 @@
+ver 1.0
+    - First release, colored text shows enemy health.
+ver 1.1
+    - Added colored health bar and colored contour
+    - Changed text color to white.
+ver 1.2
+    - Raycasts now go through enemy shields. (copied the code from 'lib/units/weapons/sentrygunweapon.lua')
+ver 1.3
+    - Fixed crashing when looking at AP round sentires.
+ver 1.4
+    - Handled case when (max_health) is 0, so (health / max_health) no longer results in a crash.
+    - Added a few maybe unnecessary safety checks.
+    - Changed how contours are handled and reduced the ammount of visual glitches.
+ver 1.5
+    - Handled rare cases when (max_health) is nil to prevent crashes.
+    - Further small changes to contours and health bars.
+    - Multiplied health values by 10 to line up with weapon damage values.

@@ -1,0 +1,15 @@
+{
+	"name" : "Custom Screen Workspace",
+	"description" : "Displays targeted enemy's health.",
+	"author" : "Toarexer",
+	"version" : "1.5",
+	"color" : "0 255 0",
+	"contact" : "-",
+	"hooks" :
+	[
+		{
+			"hook_id" : "lib/setups/gamesetup",
+			"script_path" : "CustomScreenWorkspace.lua"
+		}
+	]
+}
