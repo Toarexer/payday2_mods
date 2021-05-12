@@ -1,15 +1,3 @@
-local function CustomScreenWorkspace_clog()
-    local file = io.open("/home/tadam/Desktop/pd2.log", "w")
-    file:write("")
-    file:close()
-end
-
-local function CustomScreenWorkspace_log(val)
-    local file = io.open("/home/tadam/Desktop/pd2.log", "a")
-    file:write(tostring(val) .. "\n")
-    file:close()
-end
-
 if not CustomScreenWorkspace then
     CustomScreenWorkspace = {}
 
