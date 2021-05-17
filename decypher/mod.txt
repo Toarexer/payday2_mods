@@ -1,0 +1,15 @@
+{
+	"name" : "Ancient Text Decypher",
+	"description" : "Decyphers the obsidian plate text",
+	"author" : "Toarexer",
+	"version" : "1.0",
+	"color" : "255 255 200",
+	"contact" : "-",
+	"hooks" :
+	[
+		{
+			"hook_id" : "lib/units/props/unodevicebase",
+			"script_path" : "unodevicebase.lua"
+		}
+	]
+}
