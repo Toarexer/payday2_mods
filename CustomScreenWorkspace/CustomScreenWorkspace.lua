@@ -39,6 +39,12 @@ if not CustomScreenWorkspace then
             material_swap_required = true
         }
 
+        -- Set colors
+        self.color_green = Color(0.3, 0, 1, 0)
+        self.color_red = Color(0.3, 1, 0, 0)
+        self.color_yellow = Color(0.3, 1, 1, 0)
+        self.color_blue = Color(0.3, 0, 0.7, 1)
+
         self:setup_elements()
     end
 
@@ -128,6 +134,7 @@ if not CustomScreenWorkspace then
         if (ray and ray.unit and ray.unit:character_damage()) then
             local max_health = ray.unit:character_damage()._HEALTH_INIT
             local health = math.floor(ray.unit:character_damage()._health * 1000) / 100
+            local invulnerable = ray.unit:character_damage()._invulnerable or ray.unit:character_damage()._god_mode
 
             if not max_health then
                 return
@@ -144,13 +151,13 @@ if not CustomScreenWorkspace then
             end
 
             if percent < 0.15 then
-                self.bar_fg:set_color(Color.red:with_alpha(0.3))
+                self.bar_fg:set_color(invulnerable and self.color_blue or self.color_red)
                 add_contour(ray.unit, "CustomScreenWorkspace_red_contour")
             elseif percent < 0.35 then
-                self.bar_fg:set_color(Color.yellow:with_alpha(0.3))
+                self.bar_fg:set_color(invulnerable and self.color_blue or self.color_yellow)
                 add_contour(ray.unit, "CustomScreenWorkspace_yellow_contour")
             else
-                self.bar_fg:set_color(Color.green:with_alpha(0.3))
+                self.bar_fg:set_color(invulnerable and self.color_blue or self.color_green)
                 add_contour(ray.unit, "CustomScreenWorkspace_green_contour")
             end
 

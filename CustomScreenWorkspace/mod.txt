@@ -1,15 +1,14 @@
 {
-	"name" : "Custom Screen Workspace",
-	"description" : "Displays targeted enemy's health.",
-	"author" : "Toarexer",
-	"version" : "1.5",
-	"color" : "0 255 0",
-	"contact" : "-",
-	"hooks" :
-	[
+	"name": "Enemy Health Bar",
+	"description": "Displays targeted enemy's health.\n\n\n\n----------------------------------------\nHealth bar colors:\n  Green by default\n  Yellow if below 35%\n  Red if below 15%\n  Blue if target is invulnerable\n----------------------------------------",
+	"author": "Toarexer",
+	"version": "1.6",
+	"color": "0 255 0",
+	"contact": "-",
+	"hooks": [
 		{
-			"hook_id" : "lib/setups/gamesetup",
-			"script_path" : "CustomScreenWorkspace.lua"
+			"hook_id": "lib/setups/gamesetup",
+			"script_path": "CustomScreenWorkspace.lua"
 		}
 	]
 }

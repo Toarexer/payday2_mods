@@ -15,3 +15,6 @@ ver 1.5
     - Handled rare cases when (max_health) is nil to prevent crashes.
     - Further small changes to contours and health bars.
     - Multiplied health values by 10 to line up with weapon damage values.
+ver 1.6
+    - Added blue health bar for invulnerable units
+    - Finally updated mod.txt
